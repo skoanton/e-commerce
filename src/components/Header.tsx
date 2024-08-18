@@ -1,17 +1,24 @@
 import { Input } from "@/components/ui/input";
 import { Heart, Menu, Search, ShoppingBasket } from "lucide-react";
 import { Button } from "./ui/button";
-
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 type HeaderProps = {};
 
 export default function Header({}: HeaderProps) {
   return (
     <>
-      <nav className="flex flex-col justify-between gap-5 p-2 md:flex-row">
-        <h1 className="text-2xl font-bold uppercase text-orange-500 md:order-1">
+      <nav className="grid grid-cols-2 gap-5 p-2 md:grid-cols-4">
+        <h1 className="text-2xl font-bold uppercase text-orange-500 ">
           Not a shop
         </h1>
-        <section className="md:order-3">
+        <section className="md:order-3 justify-self-end">
           <ul>
             <li>
               <div>
@@ -30,10 +37,24 @@ export default function Header({}: HeaderProps) {
             </li>
           </ul>
         </section>
-        <section className="md:order-2 md:flex-grow">
+        <section className="col-span-2">
           <ul>
             <li className="flex gap-3 items-center">
-              <Menu className="w-8 h-8" />
+              <Button variant={"link"}></Button>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <Menu className="w-8 h-8" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>Categories</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>Music</DropdownMenuItem>
+                  <DropdownMenuItem>E-books</DropdownMenuItem>
+                  <DropdownMenuItem>Other stuff</DropdownMenuItem>
+                  <DropdownMenuItem>Read about this</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               <div className=" w-full relative">
                 <Input placeholder="Search for a product" />
