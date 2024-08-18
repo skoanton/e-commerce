@@ -8,7 +8,7 @@ import {
 
 type FiltersProps = {};
 
-const Filters = ({}: FiltersProps) => {
+export default function Filters({}: FiltersProps) {
   return (
     <section className="flex gap-2 justify-center md:justify-end md:mr-3">
       <Select>
@@ -27,6 +27,4 @@ const Filters = ({}: FiltersProps) => {
       </Select>
     </section>
   );
-};
-
-export default Filters;
+}
