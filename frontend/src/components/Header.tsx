@@ -9,6 +9,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+import SignInDialog from "./SignInDialog";
+
 type HeaderProps = {};
 
 export default function Header({}: HeaderProps) {
@@ -24,7 +27,7 @@ export default function Header({}: HeaderProps) {
               <div>
                 <ul className="flex gap-5 items-center">
                   <li>
-                    <Button>Sign in</Button>
+                    <SignInDialog />
                   </li>
                   <li>
                     <Heart className="w-8 h-8" />

@@ -1,4 +1,5 @@
 import Filters from "@/components/Filters";
+import LoginForm from "@/components/LoginForm";
 import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
