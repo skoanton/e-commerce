@@ -17,12 +17,12 @@ export default function Filters({}: FiltersProps) {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="relevance">Most Relevance</SelectItem>
-          <SelectItem value="low-high">Price (low to high)</SelectItem>
-          <SelectItem value="high-low">Price (high to low)</SelectItem>
-          <SelectItem value="high-low">Popularity (ascending)</SelectItem>
-          <SelectItem value="high-low">Alphabetic (a-z)</SelectItem>
-          <SelectItem value="high-low">Alphabetic (z-a)</SelectItem>
-          <SelectItem value="high-low">Rating (ascending)</SelectItem>
+          <SelectItem value="price-low-high">Price (low to high)</SelectItem>
+          <SelectItem value="price-high-low">Price (high to low)</SelectItem>
+          <SelectItem value="popularity">Popularity (ascending)</SelectItem>
+          <SelectItem value="alphabetic-asc">Alphabetic (a-z)</SelectItem>
+          <SelectItem value="alphabetic-desc">Alphabetic (z-a)</SelectItem>
+          <SelectItem value="rating">Rating (ascending)</SelectItem>
         </SelectContent>
       </Select>
     </section>
